@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFrameworks>net8.0;net9.0</TargetFrameworks>
+        <Version>1.0.0</Version>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <Authors>Quahu</Authors>
+        <Description>Pre-built natives for the Disqord.Voice package.</Description>
+        <RepositoryUrl>https://github.com/Quahu/Disqord.Voice.Natives</RepositoryUrl>
+        <PackageProjectUrl>https://github.com/Quahu/Disqord.Voice.Natives</PackageProjectUrl>
+        <PackageLicenseExpression>LGPL-3.0-only</PackageLicenseExpression>
+        <RepositoryType>Git</RepositoryType>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="../../README.md" Pack="true" PackagePath="/"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../../lib/win-x64/libdave.dll" Pack="true" PackagePath="runtimes/win-x64/native/" Visible="false"/>
+        <None Include="../../lib/linux-x64/libdave.so" Pack="true" PackagePath="runtimes/linux-x64/native/" Visible="false"/>
+        <None Include="../../lib/linux-arm64/libdave.so" Pack="true" PackagePath="runtimes/linux-arm64/native/" Visible="false"/>
+        <None Include="../../lib/osx-x64/libdave.dylib" Pack="true" PackagePath="runtimes/osx-x64/native/" Visible="false"/>
+        <None Include="../../lib/osx-arm64/libdave.dylib" Pack="true" PackagePath="runtimes/osx-arm64/native/" Visible="false"/>
+        <Content Include="../../lib/licenses/*" Visible="false">
+            <PackagePath>contentFiles/any/any/libdave-licenses/</PackagePath>
+            <BuildAction>None</BuildAction>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+        </Content>
+    </ItemGroup>
+</Project>

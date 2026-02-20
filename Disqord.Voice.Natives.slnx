@@ -1,0 +1,5 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Disqord.Voice.Natives/Disqord.Voice.Natives.csproj" />
+  </Folder>
+</Solution>
