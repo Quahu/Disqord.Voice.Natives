@@ -32,3 +32,6 @@ artifacts/
 # NuGet Packages
 *.nupkg
 *.snupkg
+
+# Build script working directory
+.build/
